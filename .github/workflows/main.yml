@@ -16,4 +16,8 @@ jobs:
     - name: Test
       run: |
         echo ${{ env.prod_value }}
-        echo $dr_value
+        echo ${{ env.dr_value }}
+        echo ${{ env.${{matrix.env}}_value }}
+
+
+        
