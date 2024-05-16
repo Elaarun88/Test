@@ -17,7 +17,7 @@ jobs:
       run: |
         echo ${{ env.prod_value }}
         echo ${{ env.dr_value }}
-        echo ${{ env.${{matrix.env}}_value }}
+        echo ${{matrix.env}}_value
 
 
         
