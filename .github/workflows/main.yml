@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Set env
       run: |
-        echo ${{matrix.env}}
+        echo "${{matrix.env}}"
         echo ${{matrix.env}}-value='True' >> $GITHUB_ENV
     - name: Test
       run: |
