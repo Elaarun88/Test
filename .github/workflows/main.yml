@@ -15,6 +15,7 @@ jobs:
         echo "${{matrix.env}}_value='True'" >> $GITHUB_ENV
     - name: Test
       run: |
+        sleep 10
         echo ${{ env.prod_value }}
         echo ${{ env.dr_value }}
         echo ${{matrix.env}}_value
