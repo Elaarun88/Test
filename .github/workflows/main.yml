@@ -1,0 +1,14 @@
+name: my workflow
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        env: ['prod', 'dr']
+    steps:
+    - name: Set env
+      run: echo "${{matrix.env}}='True'" >> $GITHUB_ENV
+    - name: Test
+      run: echo ${{matrix.env}}
